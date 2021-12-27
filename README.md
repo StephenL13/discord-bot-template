@@ -42,5 +42,5 @@ client.on('anyDiscordEvent', () => {
     console.log("Keep the transparency of your bot's undertakings.")
 })
 ```
-
+I also made a [Discord server](https://discord.gg/ghN4SzhJTB) if you wish to hangout with me. Though, there are many aspects in coding since I'm a first year college student as of this writing.</br>
 Thank you and have a good day!</br>- Stephen L.
