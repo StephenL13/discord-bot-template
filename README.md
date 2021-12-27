@@ -16,6 +16,8 @@ To start developing, you need the following prerequisite libraries to install vi
 
 You can run this script within the console one time: `npm install discord.js dotenv fs`
 
+Before proceeding, [a huge thanks to UltraX](https://www.youtube.com/watch?v=pcF1sOaHvEI) for this idea on the handlers. You can also check out his additional segment on the slash commands which you can go for it.
+
 ## INSIDE THE COMMAND HANDLER
 The folder is labeled `./commands` but require sub-folders to keep the bot structure organized. `module.exports.run` is where you can place all of the code you need. The latter is `module.exports.help`, which is where you modify the official command name and aliases. You can modify/remove the if/else statement if you're working on Replit/Glitch (web-based IDE) as an helpful option for you.
 ```js
