@@ -1,5 +1,5 @@
 # Discord.js v13 Bot Template
-Hey everyone! This is what I use regularly for further reference to the bots I produce. The provided `config.json` file is provided for fields to edit the code except bot tokens reserved via `.env` file. Included in this repository are the basic command and event handlers plus a free HTTP server to run and monitor using UptimeBot or BetterUptime.
+Hey everyone! This is what I use regularly for further reference to the bots I produce. The `config.json` file is provided for fields to edit the code except bot tokens reserved via `.env` file. Included in this repository are the basic command and event handlers plus a free HTTP server to run and monitor using UptimeBot or BetterUptime.
 
 ⚠ **Few reminders:** [It is best to know **JavaScript** first](https://www.youtube.com/watch?v=OWqplFjXwQc). But if you're knowledgeable enough to this programming language, you may check out these channels below.</br></br>
 https://www.youtube.com/reconlxx</br>
