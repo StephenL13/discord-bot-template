@@ -10,7 +10,7 @@ https://www.youtube.com/UltraX1</br></br><img src="https://images.ctfassets.net/
 
 To start developing, you need the following prerequisite libraries to install via NPM:
 - Node v16
-- Discord.js v16
+- Discord.js v13
 - dotenv
 - fs
 
