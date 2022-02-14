@@ -84,7 +84,7 @@ module.exports.help = {
 const client = require('../index.js').client; // Requires the client handler from the index file
 
 client.on('anyDiscordEvent', () => {
-    console.log("Keep the transparency of your bot's undertakings.")
+    console.log("I keep the transparency of your bot's undertakings.")
 })
 ```
 
