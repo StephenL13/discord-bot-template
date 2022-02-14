@@ -3,14 +3,18 @@ Hey everyone! This is what I regularly use for further reference to the bots I c
 
 If you have questions, comments, or concerns, you may post on the Issues tab or [visit my support server.](https://discord.gg/ghN4SzhJTB)
 
-Regards and wishes,<br>Stephen L.
+Regards and wishes,</br>Stephen L.
 
 ⚠ **Few reminders:** [It is best to know **JavaScript** first](https://www.youtube.com/watch?v=OWqplFjXwQc). But if you're knowledgeable enough to this programming language, you may check out these channels below.</br></br>
 https://www.youtube.com/reconlxx</br>
 https://www.youtube.com/tomato6966</br>
 https://www.youtube.com/lyxcode</br>
 https://www.youtube.com/wornoffkeys</br>
-https://www.youtube.com/UltraX1</br></br><img src="https://images.ctfassets.net/yr4qj72ki4ky/legacyBlogPost77Thumbnail/cd4783ad7b35efc4367166a570a9952e/bigstock-Real-Java-Script-Code-Developi-217215433.jpg?q=72" width="300px" height="144px" />
+https://www.youtube.com/UltraX1
+
+[A huge thanks to UltraX's tutorial](https://www.youtube.com/watch?v=pcF1sOaHvEI) for this idea on the handlers.
+
+<img src="https://images.ctfassets.net/yr4qj72ki4ky/legacyBlogPost77Thumbnail/cd4783ad7b35efc4367166a570a9952e/bigstock-Real-Java-Script-Code-Developi-217215433.jpg?q=72" width="300px" height="144px" />
 
 To start developing, you need the following prerequisite libraries to install via NPM:
 - Node v16 LTS
@@ -19,8 +23,6 @@ To start developing, you need the following prerequisite libraries to install vi
 - fs
 
 You can run this script within the console one time: `npm install discord.js dotenv fs`
-
-Before proceeding, [a huge thanks to UltraX's tutorial](https://www.youtube.com/watch?v=pcF1sOaHvEI) for this idea on the handlers.
 
 ## INSIDE THE PREFIXED COMMAND HANDLER
 The folder is labeled `./commands` but require sub-folders to keep the bot structure organized. `module.exports.run` is where you can place all of the code you need. The latter is `module.exports.help`, which is where you modify the official command name and aliases.
@@ -89,12 +91,12 @@ client.on('anyDiscordEvent', () => {
 
 ## ADDENUM
 **Q:** Why there is a developerID field on `./config.json`?
-<br>**A:** This is helpful for most developers who wish to keep their currently developing code in a private state. This should work on both prefixed and slash command handlers. Please see the `template.js` files on each of the commmand handler folders.
+</br>**A:** This is helpful for most developers who wish to keep their currently developing code in a private state. This should work on both prefixed and slash command handlers. Please see the `template.js` files on each of the commmand handler folders.
 
 **Q:** I want my bot to run on Replit. How should I use this?
-<br>**A:** Fork the repository. Log-in or signup to Replit afterwards. At the homepage, click the `+` icon and select Node.js. You must create the repl folder first. Then use the shell terminal to execute `git clone https://github.com/<Github username>/<forked repo name>.git`. Finally, move all of the necessary files to the root folder including `.git` (of your forked repo!) for version control purposes.
+</br>**A:** Fork the repository. Log-in or signup to Replit afterwards. At the homepage, click the `+` icon and select Node.js. You must create the repl folder first. Then use the shell terminal to execute `git clone https://github.com/<Github username>/<forked repo name>.git`. Finally, move all of the necessary files to the root folder including `.git` (of your forked repo!) for version control purposes.
 
 Note that the latest Node template doesn't have pre-installed Python on their Nix beta template running the native LTS unlike the legacy template. Thus, giving less capabilities for music bots utilizing Opusscript. Instead, [you may use this legacy template](https://replit.com/@replit/Nodejs?v=1#index.js) and do the `npm i node` to install Node's latest development release.
 
 **Q:** Will this be useable on TypeScript?
-<br> **A:** No. However, I can make a separate version utilizing the same bot framework library with superset usage.
+</br> **A:** No. However, I can make a separate version utilizing the same bot framework library with superset usage.
