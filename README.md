@@ -1,5 +1,6 @@
 # Discord.js v13 Bot Template
-Hey everyone! This is what I regularly use for further reference to the bots I create. The `config.json` file is provided for fields to edit the code (e.g.: prefix) except bot tokens reserved via `.env` file. Included in this repository are the command and event handlers plus a free HTTP server to run and monitor using UptimeBot or BetterUptime (applicable for Replit users).
+Hey everyone! This is what I regularly use for further reference to the bots I create. The `config.json` file is provided for fields to edit the code (e.g.: prefix) except bot tokens reserved via `.env` file. Included in this repository are the command and event handlers plus a free HTTP server to run and monitor using UptimeBot or BetterUptime (applicable for Replit users). If you have questions, comments, or concerns, you may post on the Issues tab or [visit my support server.](https://discord.gg/ghN4SzhJTB)
+<br>Regards and wishes,<br>Stephen L.
 
 ⚠ **Few reminders:** [It is best to know **JavaScript** first](https://www.youtube.com/watch?v=OWqplFjXwQc). But if you're knowledgeable enough to this programming language, you may check out these channels below.</br></br>
 https://www.youtube.com/reconlxx</br>
@@ -85,9 +86,10 @@ client.on('anyDiscordEvent', () => {
 
 ## ADDENUM
 Q: Why there is a developerID field on `./config.json`?
-A: This is helpful for most developers who wish to keep their currently developing code in a private state. This should work on both prefixed and slash command handlers. Please see the `template.js` files on each of the commmand handler folders.
+<br>A: This is helpful for most developers who wish to keep their currently developing code in a private state. This should work on both prefixed and slash command handlers. Please see the `template.js` files on each of the commmand handler folders.
 
 Q: I want my bot to run on Replit. How should I use this?
-A: Fork the repository. Log-in or signup to Replit afterwards. At the homepage, click the `+` icon and select Node.js. You must create the repl folder first. Then use the shell terminal to execute `git clone https://github.com/<Github username>/<forked repo name>.git`. Finally, move all of the necessary files to the root folder including `.git` (of your forked repo!) for version control purposes.<br>Note that the latest Node template doesn't have pre-installed Python on their Nix beta template running the native LTS unlike the legacy template. Thus, giving less capabilities for music bots utilizing Opusscript. Instead, [you may use this legacy template](https://replit.com/@replit/Nodejs?v=1#index.js) and do the `npm i node` to install Node's latest development release.
+<br>A: Fork the repository. Log-in or signup to Replit afterwards. At the homepage, click the `+` icon and select Node.js. You must create the repl folder first. Then use the shell terminal to execute `git clone https://github.com/<Github username>/<forked repo name>.git`. Finally, move all of the necessary files to the root folder including `.git` (of your forked repo!) for version control purposes.<br>Note that the latest Node template doesn't have pre-installed Python on their Nix beta template running the native LTS unlike the legacy template. Thus, giving less capabilities for music bots utilizing Opusscript. Instead, [you may use this legacy template](https://replit.com/@replit/Nodejs?v=1#index.js) and do the `npm i node` to install Node's latest development release.
 
-Thank you and have a good day!</br>- Stephen L.
+Q: Will this be useable on TypeScript?
+<br> A: No. However, I can make a separate  
