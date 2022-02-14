@@ -28,7 +28,7 @@ You can run this script within the console one time: `npm install discord.js dot
 The folder is labeled `./commands` but require sub-folders to keep the bot structure organized. `module.exports.run` is where you can place all of the code you need. The latter is `module.exports.help`, which is where you modify the official command name and aliases.
 ```js
 module.exports.run = async(client, message, args, prefix) => {
-    await message.reply({ content: "You are listening" })
+    await message.reply({ content: "This is a template test for the command handler." })
 }
 
 module.exports.help = {
@@ -45,8 +45,8 @@ However, the slash command data (`./dataHandler.js`) is in a form of JSON style.
 async function createCmd(client, guildId) {
     const data = [
         {
-            name: "ping",
-            description: "Serves a bot ping"
+            name: "test",
+            description: "Serves a bot test run"
         }
     ]
     
@@ -71,12 +71,11 @@ client.on('ready', () => {
 Finally, on `./slashcommands`, this is where we the file listens to the data handler to execute an event.
 ```js
 module.exports.run = async(client, message, args, prefix) => {
-    await message.reply({ content: `You have ${client.ws.ping} ms.` })
+    await message.reply({ content: `This is a template test for the command handler.` })
 }
 
 module.exports.help = {
-    name: "ping",
-    aliases: []
+    name: "test"
 }
 ```
 
