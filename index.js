@@ -13,15 +13,15 @@ client.slashCmds = new Discord.Collection()
 module.exports.client = client
 
 // COMMAND HANDLER
-fs.readdirSync(`./commands/`).forEach(dir => {
-    fs.readdir(`./commands/${dir}`, (err, files) => {
+fs.readdirSync(`./prefixcommands/`).forEach(dir => {
+    fs.readdir(`./prefixcommands/${dir}`, (err, files) => {
       if (err) throw err;
   
       var jsFiles = files.filter(f => f.split(".").pop() === "js");
       if (jsFiles.length <= 0) return console.log("[COMMAND HANDLER] - ~~Yet to be loaded or no avail~~");
   
       jsFiles.forEach(file => {
-        var fileGet = require(`./commands/${dir}/${file}`);
+        var fileGet = require(`./prefixcommands/${dir}/${file}`);
         console.log(`[COMMAND HANDLER] - ${file} is now loaded!`)
   
         try {

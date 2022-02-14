@@ -5,8 +5,10 @@ async function createCmd(client, guildId) {
             description: "Serves a bot ping"
         }
     ]
-    //await client.guilds.cache.get(guildId)?.commands.set(data)
-    await client.application?.commands.set(data) 
+    
+    // You can comment out which do you want to distribute your slash commands.
+    //await client.guilds.cache.get(guildId)?.commands.set(data) // Server-exclusive
+    await client.application?.commands.set(data) // Globally (perfect for public bots)
 }
 
 module.exports = { createCmd }
