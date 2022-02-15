@@ -22,6 +22,8 @@ To start developing, you need the following prerequisite libraries to install vi
 - dotenv
 - fs
 
+To create a bot account, visit https://discord.com/developers/applications. Click "New Application" and name it as you wish and click "Bot" with the jigsaw puzzle icon. On the Build-A-Bot section, click "Add Bot" and confirm to the changes. Copy the token and obtain it on your `.env` file. You must enable all the intents to be used to run the bot. Go to OAuth2 and URL Generator then choose `bot`, `applications.commands`, and your desired permissions. Copy the generated URL and invite the bot into your testing server.
+
 To setup your bot, open your terminal and execute `npm init` to start creating the Node app environment.
 <br>Then, run `npm install discord.js dotenv fs`.
 
@@ -93,10 +95,13 @@ client.on('anyDiscordEvent', () => {
 **Q:** Why there is a developerID field on `./config.json`?
 </br>**A:** This is helpful for most developers who wish to keep their currently developing code in a private state. This should work on both prefixed and slash command handlers. Please see the `template.js` files on each of the commmand handler folders.
 
+**Q:** How do I change my bot intents?
+<br>**A:** By default, it is '32767' aka. total access to all bot permissions. That can be changeable within the `index.js` folder.
+
 **Q:** I want my bot to run on Replit. How should I use this?
 </br>**A:** Fork the repository. Log-in or signup to Replit afterwards. At the homepage, click the `+` icon and select Node.js. You must create the repl folder first. Then use the shell terminal to execute `git clone https://github.com/<Github username>/<forked repo name>.git`. Finally, move all of the necessary files to the root folder including `.git` (of your forked repo!) for version control purposes.
 
-Note that the latest Node template doesn't have pre-installed Python on their Nix beta template running the native LTS unlike the legacy template. Thus, giving less capabilities for music bots utilizing Opusscript. Instead, [you may use this legacy template](https://replit.com/@replit/Nodejs?v=1#index.js) and do the `npm i node` to install Node's latest development release.
+*Note that the latest Node template doesn't have pre-installed Python on their Nix beta template running the native LTS unlike the legacy template. Thus, giving less capabilities for music bots utilizing Opusscript. Instead, [you may use this legacy template](https://replit.com/@replit/Nodejs?v=1#index.js) and do the `npm i node` to install Node's latest development release.*
 
 **Q:** Will this be useable on TypeScript?
 </br> **A:** No. However, I can make a separate version utilizing the same bot framework library with superset usage.
