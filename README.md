@@ -22,7 +22,7 @@ To start developing, you need the following prerequisite libraries to install vi
 - dotenv
 - fs
 
-You can run this script within the console one time: `npm install discord.js dotenv fs`
+To setup your bot, open your terminal and execute `npm init` to start creating the Node app environment. Then, run `npm install discord.js dotenv fs`.
 
 ## INSIDE THE PREFIXED COMMAND HANDLER
 The folder is labeled `./commands` but require sub-folders to keep the bot structure organized. `module.exports.run` is where you can place all of the code you need. The latter is `module.exports.help`, which is where you modify the official command name and aliases.
