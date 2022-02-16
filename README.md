@@ -101,7 +101,7 @@ client.on('anyDiscordEvent', () => {
 **Q:** I want my bot to run on Replit. How should I use this?
 </br>**A:** Fork the repository. Log-in or signup to Replit afterwards. At the homepage, click the `+` icon and select Node.js. You must create the repl folder first. Then use the shell terminal to execute `git clone https://github.com/<Github username>/<forked repo name>.git`. Finally, move all of the necessary files to the root folder including `.git` (of your forked repo!) for version control purposes.
 
-**Q:** My music bot that uses Opusscript cannot run!
+**Q:** My music bot that uses Opusscript cannot run! (Replit users)
 </br>**A:** Run `npm i --python=python3.10`
 
 **Q:** Will this be useable on TypeScript?
