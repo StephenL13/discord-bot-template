@@ -13,61 +13,61 @@ module.exports.client = client
 
 // COMMAND HANDLER
 fs.readdirSync(`./prefixcommands/`).forEach(dir => {
-    fs.readdir(`./prefixcommands/${dir}`, (err, files) => {
-      if (err) throw err;
-  
-      var jsFiles = files.filter(f => f.split(".").pop() === "js");
-      if (jsFiles.length <= 0) return console.log("[COMMAND HANDLER] - ~~Yet to be loaded or no avail~~");
-  
-      jsFiles.forEach(file => {
-        var fileGet = require(`./prefixcommands/${dir}/${file}`);
-        console.log(`[COMMAND HANDLER] - ${file} is now loaded!`)
-  
-        try {
-          client.commands.set(fileGet.command.name, fileGet)
-          fileGet.command.aliases.forEach(alias => {
-            client.aliases.set(alias, fileGet.command.name)
-          })
-        } catch (err) {
-          return console.log(err);
-        }
-      });
-    });
-  })
-  
-  // SLASH COMMANDS
-  fs.readdirSync(`./slashcommands/`).forEach(dir => {
-    fs.readdir(`./slashcommands/${dir}`, (err, files) => {
-      if (err) throw err;
-  
-      var jsFiles = files.filter(f => f.split(".").pop() === "js");
-      if (jsFiles.length <= 0) return console.log("[SLASH CMD HANDLER] - ~~Yet to be loaded or no avail~~");
-  
-      jsFiles.forEach(file => {
-        var fileGet = require(`./slashcommands/${dir}/${file}`);
-        console.log(`[SLASH CMD HANDLER] - ${file} is now loaded!`)
-  
-        try {
-          client.slashCmds.set(fileGet.command.name, fileGet)
-        } catch (err) {
-          return console.log(err);
-        }
-      });
-    });
-  })
-  
-  // EVENT HANDLER
-  fs.readdirSync('./events/').forEach(file => {
-    var jsFiles = fs.readdirSync('./events/').filter(f => f.split(".").pop() === "js")
-    if(jsFiles.length <= 0) return console.log("[EVENT HANDLER] - ~~Yet to be loaded or no avail~~");
-  
+  fs.readdir(`./prefixcommands/${dir}`, (err, files) => {
+    if (err) throw err;
+
+    var jsFiles = files.filter(f => f.split(".").pop() === "js");
+    if (jsFiles.length <= 0) return console.log("[COMMAND HANDLER] - ~~Yet to be loaded or no avail~~");
+
     jsFiles.forEach(file => {
-      const eventGet = require(`./events/${file}`)
-      console.log(`[EVENT HANDLER] - ${file} is now loaded!`)
+      var fileGet = require(`./prefixcommands/${dir}/${file}`);
+      console.log(`[COMMAND HANDLER] - ${file} is now loaded!`)
+
       try {
-        client.events.set(eventGet.name, eventGet)
-      } catch (error) {
-        return console.log(error)
+        client.commands.set(fileGet.command.name, fileGet)
+        fileGet.command.aliases.forEach(alias => {
+          client.aliases.set(alias, fileGet.command.name)
+        })
+      } catch (err) {
+        return console.log(err);
       }
-    })
+    });
+  });
+})
+  
+// SLASH COMMANDS
+fs.readdirSync(`./slashcommands/`).forEach(dir => {
+  fs.readdir(`./slashcommands/${dir}`, (err, files) => {
+    if (err) throw err;
+
+    var jsFiles = files.filter(f => f.split(".").pop() === "js");
+    if (jsFiles.length <= 0) return console.log("[SLASH CMD HANDLER] - ~~Yet to be loaded or no avail~~");
+
+    jsFiles.forEach(file => {
+      var fileGet = require(`./slashcommands/${dir}/${file}`);
+      console.log(`[SLASH CMD HANDLER] - ${file} is now loaded!`)
+
+      try {
+        client.slashCmds.set(fileGet.command.name, fileGet)
+      } catch (err) {
+        return console.log(err);
+      }
+    });
+  });
+})
+
+// EVENT HANDLER
+fs.readdirSync('./events/').forEach(file => {
+  var jsFiles = fs.readdirSync('./events/').filter(f => f.split(".").pop() === "js")
+  if(jsFiles.length <= 0) return console.log("[EVENT HANDLER] - ~~Yet to be loaded or no avail~~");
+
+  jsFiles.forEach(file => {
+    const eventGet = require(`./events/${file}`)
+    console.log(`[EVENT HANDLER] - ${file} is now loaded!`)
+    try {
+      client.events.set(eventGet.name, eventGet)
+    } catch (error) {
+      return console.log(error)
+    }
   })
+})
