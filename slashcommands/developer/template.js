@@ -1,4 +1,4 @@
-const { developerID } = require('../config.json')
+const { developerID } = require('../../config.json')
 module.exports.run = async (client, interaction) => {
     if(interaction.user.id === developerID) {
         await interaction.reply({ content: `This is a template test for the command handler.`, ephemeral: true })
