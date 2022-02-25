@@ -8,7 +8,7 @@ module.exports.run = async(client, message, args, prefix) => {
     }
 }
 
-module.exports.help = {
+module.exports.command = {
     name: "test",
     aliases: []
 }
