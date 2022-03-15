@@ -73,8 +73,8 @@ client.on('ready', () => {
 ```
 Finally, on `./slashcommands`, this is where we the file listens to the data handler to execute an event.
 ```js
-module.exports.run = async(client, message, args, prefix) => {
-    await message.reply({ content: `This is a template test for the command handler.`, ephemeral: true })
+module.exports.run = async(client, interaction) => {
+    await interaction.reply({ content: `This is a template test for the command handler.`, ephemeral: true })
 }
 
 module.exports.help = {
